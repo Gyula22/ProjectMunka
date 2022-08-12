@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Új tétel hozzáadása</title>
+</head>
+<link rel="stylesheet" href="/style.css">
+<body>
+
+<h1> Új tétel hozzáadása.</h1>
+
+<form data-th-object="${UserProduct}" data-th-action="@{/newitem}" method="post">
+    <input type="text" data-th-field="*{name}" placeholder="Név" />
+    <br />
+    <br />
+    <input type="text" data-th-field="*{category}" placeholder="Ketegória" />
+    <br />
+    <br />
+    <label>Vonalkód</label>
+    <br />
+    <input type="number" data-th-field="*{barcode}" />
+    <br />
+    <br />
+    <label>Mennyiség</label>
+    <br />
+    <input type="number" data-th-field="*{quantity}" />
+    <br />
+    <br />
+    <br />
+    <br />
+    <input type="submit" value="Mentés">
+    <br />
+    <br />
+    <a data-th-href="@{/maintenance}">Mégse</a>
+</form>
+<footer>
+    <div id = "digital-clock"> </div>
+    <script src = "script.js"> </script>
+    @ Created by Gyula 2022 Aug 12. Copy only for classmates.
+</footer>
+</body>
+</html>
